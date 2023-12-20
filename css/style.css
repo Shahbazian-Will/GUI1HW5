@@ -1,0 +1,128 @@
+/*Customizing the UI*/
+
+#container {
+  color: black;
+  background-color: navajowhite;
+  height: 670px;
+
+}
+
+#header {
+  font: 300% arial;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+#subheader {
+  text-align: center;
+  font: 200%;
+
+}
+
+#subtiles {
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  width: 480px;
+  box-shadow: 2px 2px 25px black;
+}
+
+#subtiles img {
+  width: 60px;
+  height: auto;
+}
+
+body {
+  background-color: rgba(220, 194, 135, 1.0);
+}
+
+#game-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#reset-tile,
+#next-word,
+#new-game {
+  border-radius: 5px;
+  font: 120% comic;
+}
+
+#scoreBoard {
+  display: flex;
+  justify-content: center;
+  font: italic 100% times;
+  color: black;
+}
+
+#score,
+#total-score,
+#tiles-remaining,
+#current-word {
+  justify-content: center;
+  text-align: center;
+}
+
+#tileBoard {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/*Highlight spaces on hover */
+#tileBoard .ui-droppable-hover {
+  box-shadow: 1px 1px 25px black;
+}
+
+/*Rack Visuals*/
+#tileRack {
+  background: url("../images/Tile_Rack.png");
+  margin: auto;
+  height: 230px;
+  background-repeat: no-repeat;
+  width: 650px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/*Other Rack Properties*/
+#innerRack {
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 0px;
+  padding-top: 60px;
+  height: 60px;
+  margin-bottom: 40px;
+}
+
+/*Blank Board Space*/
+.boardTile {
+  display: inline-block;
+  background: url("../images/tiles/blank.png");
+  width: 80px;
+  height: 85px;
+  background-repeat: no-repeat;
+}
+
+/*Double Word spaces */
+.doubleWord {
+  display: inline-block;
+  background: url("../images/tiles/double_word.png");
+  width: 80px;
+  height: 85px;
+  background-repeat: no-repeat;
+}
+
+/*Blank Tiles*/
+.blankTileLetters {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+/*Make sure user selects a letter instead of exiting.*/
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}

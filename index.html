@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HW5</title>
+  <!-- Links for stylesheets-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<!-- The game UI code-->
+
+<body>
+  <div id="container">
+    <h1 id="header">HW5</h1>
+    <div id="subheader">
+    </div>
+    <hr>
+    <div id="scoreBoard">
+      <div class="col-sm-3" id="current-word">In-Progress Word: </div>
+      <div class="col-sm-3" id="score">In-Progress Word Score: 0</div>
+      <div class="col-sm-3" id="total-score" currentscore=0>Compiled Score: 0</div>
+      <div class="col-sm-3" id="tiles-remaining">Remaining Tiles in Pool: 100/100</div>
+    </div>
+    <hr>
+    <!--Slots representing board spaces-->
+    <div id="tileBoard">
+      <div id="slot-1" class="boardTile" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-2" class="doubleWord" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-3" class="boardTile" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-4" class="boardTile" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-5" class="boardTile" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-6" class="doubleWord" multiplier=1 eligible=0 used=0 letter=-1></div>
+      <div id="slot-7" class="boardTile" multiplier=1 eligible=0 used=0 letter=-1></div>
+    </div>
+    <hr>
+    <div id="tileRack">
+      <div id="innerRack"></div>
+    </div>
+    <!-- Buttons for their respectively labeled functions-->
+    <div id="game-buttons">
+      <button type="button" id="reset-tile">New Tiles</button>
+      <button type="button" id="next-word">Enter Word</button>
+      <button type="button" id="new-game">Restart Game</button>
+    </div>
+
+
+  </div>
+
+  <!-- Links for JS and jQuery-->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+    integrity="sha384-4D3G3GikQs6hLlLZGdz5wLFzuqE9v4yVGAcOH86y23JqBDPzj9viv0EqyfIa6YUL"
+    crossorigin="anonymous"></script>
+  <script src="js/add-content.js"></script>
+</body>
+
+</html>
