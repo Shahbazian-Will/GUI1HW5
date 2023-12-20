@@ -264,6 +264,9 @@ $(function () {
 
   // Fill rack up to 7 tiles after each submission, if possible
   function fillRackForNextHand() {
+    console.log("Rack length " + currentRack.length);
+    console.log("Pool length " + pool.length);
+    console.log("word " + word);
     if (word == "")
     {
       if (pool.length == 0 && currentRack.length == 0)
@@ -273,7 +276,7 @@ $(function () {
       return;
     }
    
-
+    //console.log("Rack length " + currentRack.length);
     if (currentRack.length < 7) {
       missingHandTiles = 7 - currentRack.length;
       if (pool.length < missingHandTiles && currentRack.length !== 0) {
@@ -389,11 +392,12 @@ $(function () {
       $el.setAttribute("letter", -1);
     });
     board = [];
+    currentWord = ""
     fillRackForNextHand();
     scoreWord();
     currentScore = 0;
     $("#score").text("In-Progress Word Score: " + currentScore);
-    $("#current-word").text("In-Progress Word: ");
+    $("#current-word").text("In-Progress Word: " + currentWord);
     $("#tileBoard div").attr("used", 0);
     $("#tileBoard div").attr("eligible", 1);
     doubleCount = 0;
@@ -405,11 +409,13 @@ $(function () {
     board = [];
     total = 0;
     currentScore = 0;
-
+    currentWord = "";
+    word = "";
     $("#tileBoard div").each(function (index, $el) {
       $el.setAttribute("letter", -1);
     });
     $("#score").text("In-Progress Word Score: " + currentScore);
+    $("#current-word").text("In-Progress Word: " + currentWord);
     $("#innerRack img").remove();
     $("#tileBoard div").attr("used", 0);
     makeRack();
