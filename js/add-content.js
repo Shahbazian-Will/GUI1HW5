@@ -264,10 +264,15 @@ $(function () {
 
   // Fill rack up to 7 tiles after each submission, if possible
   function fillRackForNextHand() {
-    if (pool.length == 0 && currentRack.length == 0) {
-      alert("There are no more tiles in your rack or the deck");
+    if (word == "")
+    {
+      if (pool.length == 0 && currentRack.length == 0)
+      {
+        alert("There are no more tiles in your rack or the deck");
+      }
       return;
     }
+   
 
     if (currentRack.length < 7) {
       missingHandTiles = 7 - currentRack.length;
